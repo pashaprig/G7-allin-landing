@@ -1,13 +1,3 @@
-<!-- <?php
-$path = $path ?? './';
-$form = $form ?? '';
-
-if( isset($_GET['page']) && file_exists($filePage = __DIR__.'/pages/'.$_GET['page'].'.php') ) {
-	include $filePage;
-	die();
-}
-?> -->
-
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -15,9 +5,7 @@ if( isset($_GET['page']) && file_exists($filePage = __DIR__.'/pages/'.$_GET['pag
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Halyk Bank</title>
-  <meta
-    name="Halyk банк продолжает свою миссию предоставления широкого спектра финансовых услуг в Казахстане и других странах в соответствии с международными стандартами. Они стремятся обеспечить сохранность, эффективное размещение и увеличение средств клиентов и акционеров во всех сегментах финансового рынка, включая банковское дело, страхование, ценные бумаги и лизинг"
-    content="Title">
+  <meta name="description" content="description">
   <link rel="stylesheet" href="css/style.min.css">
   <!-- https://realfavicongenerator.net/ -->
   <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon.png">
@@ -28,97 +16,6 @@ if( isset($_GET['page']) && file_exists($filePage = __DIR__.'/pages/'.$_GET['pag
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
 
-    <!-- Facebook Pixel Code -->
-    <!-- <script>
-      ! function(f, b, e, v, n, t, s) {
-        if (f.fbq) return;
-        n = f.fbq = function() {
-          n.callMethod ?
-            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = '2.0';
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s)
-      }(window, document, 'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-      <?php if (!empty($_GET['fb_pixel'])) : ?>
-        <?php foreach (explode(',', $_GET['fb_pixel']) as $pixel) : ?>
-          fbq('init', '<?= trim($pixel); ?>');
-        <?php endforeach; ?>
-      <?php else : ?>
-        fbq('init', '<?php echo isset($_GET['fb_pixel']) ? $_GET['fb_pixel'] : '000000000000000'; ?>');
-      <?php endif; ?>
-      fbq('track', 'PageView');
-    </script> -->
-
-    <!-- <noscript>
-      <?php if (!empty($_GET['fb_pixel'])) : ?>
-        <?php foreach (explode(',', $_GET['fb_pixel']) as $pixel) : ?>
-          <img height="1" width="1" style="display: none" src="https://www.facebook.com/tr?id=<?= trim($pixel); ?>&ev=PageView&noscript=1" />
-        <?php endforeach; ?>
-      <?php else : ?>
-        <img height="1" width="1" style="display: none" src="https://www.facebook.com/tr?id=<?php echo isset($_GET['fb_pixel']) ? $_GET['fb_pixel'] : '000000000000000'; ?>&ev=PageView&noscript=1" />
-      <?php endif; ?>
-    </noscript> -->
-    <!-- End Facebook Pixel Code -->
-
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-<?php echo isset($_GET['ga_id']) ? $_GET['ga_id'] : '000000000000000'; ?>"></script>
-
-    <script>
-      window.dataLayer = window.dataLayer || [];
-
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-
-      gtag('js', new Date());
-
-      gtag('config', 'AW-<?php echo isset($_GET['ga_id']) ? $_GET['ga_id'] : '000000000000000'; ?>');
-    </script> -->
-<!--
-    <script>
-      function call_gtag() {
-        gtag('event', 'conversion', {
-          'send_to': 'AW-<?php echo isset($_GET['ga_id']) ? $_GET['ga_id'] : '000000000000000'; ?>/<?php echo isset($_GET['ga_event']) ? $_GET['ga_event'] : '000000000000000'; ?>'
-        });
-      }
-    </script> -->
-    <!-- End GTAG Code -->
-
-    <!-- TikTok Code -->
-    <!-- <script>
-      ! function(w, d, t) {
-        w.TiktokAnalyticsObject = t;
-        var ttq = w[t] = w[t] || [];
-        ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie"], ttq.setAndDefer = function(t, e) {
-          t[e] = function() {
-            t.push([e].concat(Array.prototype.slice.call(arguments, 0)))
-          }
-        };
-        for (var i = 0; i < ttq.methods.length; i++) ttq.setAndDefer(ttq, ttq.methods[i]);
-        ttq.instance = function(t) {
-          for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++) ttq.setAndDefer(e, ttq.methods[n]);
-          return e
-        }, ttq.load = function(e, n) {
-          var i = "https://analytics.tiktok.com/i18n/pixel/events.js";
-          ttq._i = ttq._i || {}, ttq._i[e] = [], ttq._i[e]._u = i, ttq._t = ttq._t || {}, ttq._t[e] = +new Date, ttq._o = ttq._o || {}, ttq._o[e] = n || {};
-          var o = document.createElement("script");
-          o.type = "text/javascript", o.async = !0, o.src = i + "?sdkid=" + e + "&lib=" + t;
-          var a = document.getElementsByTagName("script")[0];
-          a.parentNode.insertBefore(o, a)
-        };
-
-        ttq.load('<?php echo isset($_GET['tiktok']) ? $_GET['tiktok'] : '000000000000000'; ?>');
-      }(window, document, 'ttq');
-    </script> -->
-    <!-- End TikTok Code -->
 </head>
 
 <body class="page-body">
