@@ -1,11 +1,8 @@
-// MENU
-
 class App {
   init() {
     this.initMobileMenu();
     this.initRange();
     this.showHideLicense();
-    this.scroll();
     this.initSlider();
     this.afterVideoPlay();
     this.onButtonPlay();
@@ -125,48 +122,6 @@ class App {
         $modal.close()
       }
     })
-  }
-
-  scroll() {
-    let scrollToFirst, scrollToSecond, scrollToThird, scrollToLast;
-    const deviceWidth = document.documentElement.clientWidth
-
-    if (deviceWidth > 768) {
-      // desktop
-      scrollToFirst = 4700
-      scrollToSecond =4850
-      scrollToThird =5000
-      scrollToLast =5200
-    } else {
-      // mobile
-      scrollToFirst = 5200
-      scrollToSecond =5400
-      scrollToThird =5700
-      scrollToLast =5900
-    }
-
-    const circles = document.querySelectorAll('.start__about')
-
-    function resetColors() {
-      circles.forEach(c => { c.classList.remove('start__about--active') })
-    }
-
-    window.addEventListener('scroll', () => {
-      if (window.pageYOffset < scrollToFirst) {
-        resetColors();
-        circles[0].classList.add('start__about--active')
-      } else if (window.pageYOffset < scrollToSecond) {
-        resetColors();
-        circles[1].classList.add('start__about--active')
-      } else if (window.pageYOffset < scrollToThird) {
-        resetColors();
-        circles[2].classList.add('start__about--active')
-      } else if (window.pageYOffset > scrollToLast) {
-        resetColors();
-        circles[3].classList.add('start__about--active')
-      }
-    })
-
   }
 
   initSlider() {
