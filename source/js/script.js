@@ -6,6 +6,7 @@ class App {
     this.initSlider();
     this.afterVideoPlay();
     this.onButtonPlay();
+    this.showHide()
   }
 
   constructor() {
@@ -167,6 +168,18 @@ class App {
     }
 
     this.btnPlay.addEventListener('click', playVideo);
+  }
+
+    showHide() {
+    document.querySelectorAll('.faq__container').forEach(container => {
+      const button = container.querySelector('.faq__toggle-btn');
+      const content = container.querySelector('.faq__dropdown-content');
+
+      button.addEventListener('click', function () {
+        content.classList.toggle('show');
+        button.classList.toggle('show');
+      });
+    });
   }
 }
 
