@@ -43,20 +43,28 @@
         <h1 class="promo__heading heading">Получай дивиденды от <span>150&nbsp;000&nbsp;₸</span> в неделю</h1>
         <p class="promo__about">Стань одним из первых инвесторов, приобретающих акции самого крупного банка в
           Казахстане.</p>
-        <form action="#" class="form" method="POST" id="leadform1">
-          <input type="text" name="name" id="name" placeholder="Имя Фамилия">
-          <input type="email" name="email" id="email" placeholder="Эл. адрес">
-          <input type="tel" name="phone1" placeholder="" id="phone1" />
-          <input id="realPhone1" class="hidden-phone" type="hidden" name="phone" value="" />
-          <input type="hidden" name="currency" value="usd">
-          <input id="country1" type="hidden" name="country" value="ru">
-          <input type="hidden" name="comment" class="comment" value="">
-          <input type="hidden" name="campaign_name" value="">
-          <button class="btn submit_btn" type="submit">
-            <span>Отправить заявку</span>
-          </button>
+        <form action="<?=$form;?>" aria-form-type="userData">
+          <div class="form-group">
+            <input type="text" name="firstName" class="form-input" required />
+            <input type="text" name="lastName" class="form-input" required />
+            <input type="email" name="email" placeholder="Email" class="form-input" required />
+            <input type="tel" id="phone1" name="phone1" class="form-input form-input-phone" required />
+
+            <label class="form__checkbox">
+              <input type="checkbox" name="policy" id="" checked="checked">
+              <span>I agree to <a target="_blank" href="<?= setUrlPage('legal'); ?>">Privacy Policy</a>.</span>
+            </label>
+
+            <label class="form__checkbox">
+              <input type="checkbox" name="terms" id="" checked="checked">
+              <span>I am over 18 years</span>
+            </label>
+          </div>
+
+          <button class="submit_btn" type="submit">Register</button>
+
           <div class="form_message error inactive"
-            style="margin:15px 0;background-color: #ffd4d4;border: 2px dashed #ce0909;border-radius: 10px;padding: 20px;max-width: 350px;">
+            style="margin:15px auto;background-color: #ffd4d4;border: 2px dashed #ce0909;border-radius: 10px;padding: 20px;max-width: 350px;">
           </div>
         </form>
       </div>
